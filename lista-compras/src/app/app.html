@@ -1,0 +1,42 @@
+
+<h1>{{ title() }}</h1>
+
+<div class="formulario">
+    
+    <input #nombre placeholder="Producto" value="">
+    <input #cantidad type="number" placeholder="Cantidad" min="1" value="1">
+    <input #categoria placeholder="Categoría" value="">
+    <button (click)="agregarItem(nombre.value, cantidad.valueAsNumber, categoria.value); 
+                     nombre.value=''; cantidad.value=''; categoria.value=''">
+      Agregar
+    </button>
+  </div>
+
+<table>
+    <thead>
+      <tr>
+        <th>Producto</th>   
+        <th>Cantidad</th>   
+        <th>Categoría</th>  
+        <th>Acciones</th>   
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of lista(); let i = index" [class.comprado]="item.comprado">
+        <td>{{ item.nombre }}</td>
+        <td>{{ item.cantidad }}</td>
+        <td>{{ item.categoria }}</td>
+        <td>
+          <button (click)="marcarComprado(i)">
+            {{ item.comprado ? 'Desmarcar' : 'Marcar como comprado' }}
+          </button>
+          <button (click)="eliminarItem(i)">Eliminar</button>
+        </td>
+      </tr>
+
+  </table>
+
+  <p>Total de productos: {{ totalItems() }}</p>
+  
+  
+  

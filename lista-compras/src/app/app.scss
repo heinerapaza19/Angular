@@ -1,0 +1,79 @@
+/* ===========================
+   TITULO PRINCIPAL
+   =========================== */
+   h1 {
+    color: #2c3e50;               /* Color del texto */
+    text-align: center;            /* Centrar el texto */
+    margin-top: 20px;              /* Separación superior */
+    font-family: Arial, sans-serif; /* Fuente del título */
+  }
+ 
+  /* ===========================
+     FORMULARIO DE INGRESO DE PRODUCTOS
+     =========================== */
+  .formulario {
+    margin: 20px 0;                /* Separación superior e inferior */
+    text-align: center;            /* Centrar los elementos del formulario */
+  }
+ 
+  .formulario input {
+    margin-right: 5px;             /* Espacio entre inputs */
+    padding: 5px 8px;              /* Relleno interno */
+    width: 150px;                  /* Ancho de los inputs */
+    border: 1px solid #ccc;        /* Borde gris claro */
+    border-radius: 4px;            /* Bordes redondeados */
+    box-sizing: border-box;        /* Para que padding no afecte el ancho */
+  }
+ 
+  /* Quitar borde rojo de validación de los inputs */
+  .formulario input:invalid {
+    border-color: #ccc;
+    box-shadow: none;
+  }
+ 
+  .formulario button {
+    background-color: #27ae60;     /* Color verde del botón */
+    color: white;                  /* Texto blanco */
+    border: none;                  /* Sin borde */
+    border-radius: 5px;            /* Bordes redondeados */
+    padding: 5px 10px;             /* Espaciado interno */
+    cursor: pointer;               /* Cambia cursor al pasar por encima */
+    font-weight: bold;             /* Texto en negrita */
+    transition: 0.3s;              /* Animación suave al hover */
+  }
+ 
+  /* Efecto al pasar el mouse sobre el botón */
+  .formulario button:hover {
+    background-color: #2ecc71;     /* Verde más claro */
+  }
+ 
+  /* ===========================
+     TABLA DE PRODUCTOS
+     =========================== */
+  table {
+    width: 100%;                   /* Tabla ocupa todo el ancho */
+    border-collapse: collapse;     /* Bordes unidos */
+    margin-top: 20px;              /* Separación superior */
+    font-family: Arial, sans-serif;
+  }
+ 
+  table th, table td {
+    border: 1px solid #ccc;        /* Borde gris */
+    padding: 8px;                  /* Espaciado interno */
+    text-align: center;            /* Centrar contenido */
+  }
+ 
+  table th {
+    background-color: #2980b9;    /* Fondo azul para encabezados */
+    color: white;                  /* Texto blanco en encabezado */
+  }
+ 
+  /* ===========================
+     FILAS MARCADAS COMO COMPRADAS
+     =========================== */
+  tr.comprado td {
+    text-decoration: line-through; /* Tachado */
+    color: gray;                   /* Texto gris */
+  }
+ 
+  /* ===========================*/
