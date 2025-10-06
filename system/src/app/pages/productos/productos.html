@@ -1,0 +1,52 @@
+<div class="admin-container">
+  <!-- === ENCABEZADO === -->
+  <div class="header">
+    <h1>📦 Lista de Productos Existentes</h1>
+    <p class="subtitulo">Panel del administrador — controla y agrega productos de la tienda</p>
+  </div>
+
+  <!-- === FORMULARIO PARA AGREGAR NUEVOS PRODUCTOS === -->
+  <div class="formulario">
+    <input #nombre type="text" placeholder="Nombre del producto">
+    <input #cantidad type="number" placeholder="Stock disponible" min="0" value="1">
+    <input #categoria type="text" placeholder="Categoría">
+    <input #precio type="number" placeholder="Precio (USD)" min="0" value="0">
+
+    <button class="btn-agregar"
+      (click)="agregarProducto(nombre.value, +cantidad.value, categoria.value, +precio.value)">
+      ➕ Agregar Producto
+    </button>
+  </div>
+
+  <!-- === TABLA DE PRODUCTOS EXISTENTES === -->
+  <table>
+    <thead>
+      <tr>
+        <th>Producto</th>
+        <th>Categoría</th>
+        <th>Stock</th>
+        <th>Precio</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of lista(); let i = index">
+        <td>{{ item.nombre }}</td>
+        <td>{{ item.categoria }}</td>
+        <td>{{ item.cantidad }}</td>
+        <td>{{ item.precio | currency:'USD':'symbol':'1.2-2' }}</td>
+        <td>
+          <button class="btn-delete" (click)="eliminarProducto(i)">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- === TOTAL DE PRODUCTOS === -->
+  <p class="total-display">Total de productos registrados: {{ lista().length }}</p>
+
+  <!-- === PIE DE PÁGINA === -->
+  <div class="footer">
+    <p>© 2025 Tienda de Abarrotes Heiner — Panel del Administrador</p>
+  </div>
+</div>

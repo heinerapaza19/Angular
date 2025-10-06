@@ -1,0 +1,130 @@
+/* === CONTENEDOR PRINCIPAL === */
+.admin-container {
+  font-family: 'Poppins', sans-serif;
+  padding: 30px;
+  background: linear-gradient(180deg, #f0f4f7 0%, #e9f5ee 100%);
+  color: #2c3e50;
+  min-height: 100vh; /* Ocupa toda la altura visible de la pantalla */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* === ENCABEZADO === */
+.header {
+  background-color: #27ae60;
+  color: white;
+  padding: 25px;
+  border-radius: 10px;
+  text-align: center;
+  width: 100%;
+  max-width: 1200px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.subtitulo {
+  color: #ecf0f1;
+  font-size: 1.1em;
+}
+
+/* === FORMULARIO PARA NUEVOS PRODUCTOS === */
+.formulario {
+  margin: 30px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.formulario input {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 180px;
+  font-size: 0.95em;
+  transition: 0.2s;
+}
+
+.formulario input:focus {
+  outline: none;
+  border-color: #27ae60;
+  box-shadow: 0 0 5px #27ae60;
+}
+
+/* === BOTÓN AGREGAR === */
+.btn-agregar {
+  background: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-agregar:hover {
+  background: #1e8449;
+}
+
+/* === TABLA DE PRODUCTOS === */
+table {
+  width: 95%;
+  max-width: 1200px;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+  padding: 14px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+th {
+  background-color: #27ae60;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+tr:hover {
+  background-color: #ecf0f1;
+}
+
+/* === BOTÓN ELIMINAR === */
+.btn-delete {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-delete:hover {
+  background: #c0392b;
+}
+
+/* === TOTAL DE PRODUCTOS === */
+.total-display {
+  text-align: center;
+  margin-top: 25px;
+  font-size: 1.1em;
+  color: #2c3e50;
+}
+
+/* === PIE DE PÁGINA === */
+.footer {
+  text-align: center;
+  margin-top: 40px;
+  color: #7f8c8d;
+  font-size: 0.9em;
+  width: 100%;
+}

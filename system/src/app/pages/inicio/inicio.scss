@@ -1,0 +1,98 @@
+.inicio-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #f0f9ff 0%, #cbebff 100%);
+  font-family: 'Poppins', sans-serif;
+  color: #2c3e50;
+  min-height: 100vh;
+}
+
+.header-card {
+  background: white;
+  padding: 30px 40px;
+  border-radius: 16px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-bottom: 40px;
+  transition: transform 0.3s ease;
+}
+
+.header-card:hover {
+  transform: scale(1.03);
+}
+
+.header-card h1 {
+  font-size: 2.2em;
+  color: #1a5276;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: #566573;
+  font-size: 1.1em;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.card {
+  background: white;
+  border-radius: 16px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.icon {
+  font-size: 2.5em;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  color: #2980b9;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #566573;
+  font-size: 0.95em;
+}
+
+.cta {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.cta p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.btn-explorar {
+  background-color: #2980b9;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 25px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-explorar:hover {
+  background-color: #1f6390;
+}

@@ -1,0 +1,44 @@
+/* Estilos para el menú de navegación principal */
+header {
+  background-color: #34495e; /* Un azul oscuro/grisáceo */
+  padding: 15px 30px;
+  color: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 15px;
+  margin-right: 10px;
+  border-radius: 5px;
+  font-weight: normal;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #4a6582; /* Un poco más claro al pasar el mouse */
+}
+
+/* El estilo para el enlace de la marca o título */
+nav a.brand {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+/* Este estilo se aplica automáticamente al enlace de la página activa */
+nav a.active-link {
+  background-color: #2980b9; /* Azul brillante para destacar la página actual */
+}
+
+/* El 'main' es donde se cargan tus páginas, le damos un poco de espacio */
+main {
+  /* Eliminamos el ancho máximo para que ocupe toda la pantalla */
+  /* max-width: 900px;  <-- BORRA O COMENTA ESTA LÍNEA */
+  /* margin: 0 auto;      <-- BORRA O COMENTA ESTA LÍNEA */
+  
+  /* Mantenemos el padding para que el contenido no se pegue a los bordes */
+  padding: 20px;
+}

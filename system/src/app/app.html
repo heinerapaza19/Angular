@@ -1,0 +1,20 @@
+<header>
+  <nav>
+    <!-- El primer enlace funciona como el logo o título principal -->
+ <h1>BIENVENIDO A LA TIENDA DE SYSTEM</h1>
+
+    <!-- Enlaces de navegación -->
+     
+    <a routerLink="/inicio" routerLinkActive="active-link">inicio</a>
+    <a routerLink="/listas" routerLinkActive="active-link">promociones</a>
+    <a routerLink="/productos" routerLinkActive="active-link">Productos</a>
+    <a routerLink="/inventario" routerLinkActive="active-link">Inventario</a>
+    <a routerLink="/contacto" routerLinkActive="active-link">Contacto</a>
+   
+  </nav>
+</header>
+
+<main>
+  <!-- Este es el espacio donde se cargarán tus páginas (Inicio, Contacto, etc.) -->
+  <router-outlet></router-outlet>
+</main>

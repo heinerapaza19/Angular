@@ -1,0 +1,65 @@
+<!-- =======================================
+     PANEL DE PROMOCIONES DEL ADMINISTRADOR
+     ======================================= -->
+     <div class="admin-container">
+
+      <!-- ENCABEZADO -->
+      <header class="header">
+        <h1>🛍️ Promocionar Productos</h1>
+        <p class="subtitulo">Gestiona las ofertas y promociones disponibles en tu tienda</p>
+      </header>
+    
+      <!-- RESUMEN GENERAL -->
+      <section class="resumen">
+        <p><strong>Total de productos:</strong> {{ lista().length }}</p>
+        <p><strong>Productos en oferta:</strong> {{ totalOfertas() }}</p>
+      </section>
+    
+      <!-- FORMULARIO PARA AGREGAR NUEVOS PRODUCTOS A PROMOCIONAR -->
+      <div class="formulario">
+        <input #nombre placeholder="Nombre del producto">
+        <input #categoria placeholder="Categoría">
+        <input #cantidad type="number" min="1" placeholder="Cantidad">
+        <button class="btn-agregar"
+          (click)="agregarProducto(nombre.value, categoria.value, cantidad.valueAsNumber);
+                   nombre.value=''; categoria.value=''; cantidad.value=''">
+          ➕ Agregar Producto
+        </button>
+      </div>
+    
+      <!-- TABLA DE PRODUCTOS -->
+      <h2 class="titulo-seccion">📦 Lista de Productos</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Producto</th>
+            <th>Categoría</th>
+            <th>Cantidad</th>
+            <th>Estado</th>
+            <th>Acción</th>
+          </tr>
+        </thead>
+    
+        <tbody>
+          <tr *ngFor="let item of lista(); let i = index">
+            <td>{{ item.nombre }}</td>
+            <td>{{ item.categoria }}</td>
+            <td>{{ item.cantidad }}</td>
+            <td [class.oferta]="item.oferta">
+              {{ item.oferta ? 'En oferta' : 'Normal' }}
+            </td>
+            <td>
+              <!-- Botón cambia entre activar o quitar oferta -->
+              <button *ngIf="!item.oferta" class="btn-oferta" (click)="activarOferta(i)">Promocionar</button>
+              <button *ngIf="item.oferta" class="btn-normal" (click)="quitarOferta(i)">Quitar Promoción</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    
+      <!-- PIE DE PÁGINA -->
+      <footer class="footer">
+        <p>© 2025 Tienda Heiner — Panel de Promociones</p>
+      </footer>
+    </div>
+    
